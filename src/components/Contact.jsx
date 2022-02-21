@@ -11,12 +11,12 @@ function Contact(props) {
         let formData = new FormData(event.currentTarget);
         const value = JSON.stringify(Object.fromEntries(formData));
         const json = JSON.tryParse(value);
-        fetch("http://localhost:5000/formData", {
+        fetch("http://localhost:5000/contact", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            method: "post",
+            method: "put",
             body: JSON.stringify(json)
         })
         .then(resp => resp.text()).then(text => {
@@ -28,6 +28,16 @@ function Contact(props) {
     return (
         <div className='myForm'>
             <form id='ContactData' onSubmit={handleSubmit}>
+                <div className="mb-3">
+                    <label htmlFor="firstname1" className="form-label text-light">firstname</label>
+                    <input type="firstname" className="form-control" id="firstname1" name="firstname" aria-describedby="emailHelp" />
+                    
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="lastname1" className="form-label text-light">lastname</label>
+                    <input type="lastname" className="form-control" id="lastname1" name="lastname" aria-describedby="emailHelp" />
+                    
+                </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label text-light">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" />

@@ -2,22 +2,74 @@
   text-align: center;
 }
 body{
-  background-color: rgb(9, 0, 48);
+  background-color: #D3B1C2 ;
 }
 
 .myForm{
+  margin-top: 50px !important;
   margin: 0 auto;
   max-width: 400px;
+  padding: 40px;
+  background-color: #130329;
 }
 .myNav{
-  background-color: rgb(161, 0, 0) !important;
+  background-color:   #130329   !important;
   margin-bottom: 30px;
 }
 .bleu{
   color: rgb(9, 0, 48) ;
 }
 .mySubmit{
-  margin-top: 10px;
-  background-color: rgb(161, 0, 0);
+  /* margin-top: 10px; */
+  background-color: #FCA7A5 ;
   border: none;
+  width: 200px;
+  padding: 10px;
+  color: #130329;
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: auto;
+}
+.pageTitle{
+  text-align: center;
+  font-weight: 650;
+}
+.myPink{
+  color: #FCA7A5 !important;
+}
+/* mauve   #D3B1C2  */
+.bg{
+  background-image: url(../public/images/téléchargement\ \(1\).png) !important;
+}
+.myLinks{
+  padding-left: 0px;
+  padding-top: 0px;
+}
+.myInputs{
+  margin-top: 30px;
+}
+.titleForms{
+  text-align: center;
+  font-weight: 400;
+  color: #FCA7A5;
+}
+.submitForm{
+  margin-top: 40px;
+  text-align: center;
+}
+.lettre-space-5{
+  letter-spacing: 5px;
+}
+.lettre-space-2{
+  letter-spacing: 2px;
+}
+.inputCaptcha{
+  margin-left: 5px;
+}
+.inputCaptcha input{
+  width: 163px ;
+}
+.captcha a{
+  color: cc;
 }
