@@ -27,7 +27,7 @@ function Login(props) {
         let formData = new FormData(event.currentTarget);
         const value = JSON.stringify(Object.fromEntries(formData));
         const json = JSON.tryParse(value);
-        fetch("http://localhost:5000/auth", {
+        fetch("http://localhost:5000/auth/login", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

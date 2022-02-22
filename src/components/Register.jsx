@@ -9,16 +9,17 @@ function Register(props) {
         let formData = new FormData(event.currentTarget);
         const value = JSON.stringify(Object.fromEntries(formData));
         const json = JSON.tryParse(value);
-        fetch("http://localhost:5000/auth", {
+        fetch("http://localhost:5000/auth/register", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            method: "put",
+            method: "post",
             body: JSON.stringify(json)
         })
         .then(resp => resp.text()).then(text => {
             const json = JSON.tryParse(text);
+            document.cookie = `auth=${json.token};max-age=${60*60*24}`;
             console.log(json);
         });
     }

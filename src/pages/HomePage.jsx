@@ -4,7 +4,7 @@ function HomePage(props){
 
     return(
         <>
-            <NavBar />
+            <h2 className="pageTitle lettre-space-5">Page d'accueil</h2>
             <Contact />
         </>
     )

@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<BaseScreen />}> 
-            <Route path="/home" index element={<HomePage />}/>
+            <Route path="/" index element={<HomePage />}/>
             <Route path="/login" element={<LoginPage />}/>
             <Route path="/register" element={<RegisterPage />}/>
             {/* <Route path="/admin" element={}/>
