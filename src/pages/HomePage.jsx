@@ -1,5 +1,5 @@
 import  Contact  from "../components/Contact";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 function HomePage(props){
 
     return(

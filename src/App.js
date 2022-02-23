@@ -1,7 +1,7 @@
 
 import './App.css';
-import react from 'react';
-import { BrowserRouter as Router, Switch, Route, Routes, Link } from "react-router-dom";
+// import react from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import BaseScreen from './pages/BaseScreen';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';

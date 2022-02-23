@@ -1,47 +1,37 @@
+:root {
+  --blue: #022334;
+  --grisClaire : #C5CACD;
+  --pink :#d5aeb8;
+  --green: #59981A;
+  --yellow-green: #ECF87F;
+  --lime-green: #81B622;
+  --olive-green: #3D550C;
+  --seafoam-green: #305f35 ;
+  --spearmint: #94C973;
+  --kelly-green: #B1D8B7;
+  /* ---green: ;
+  ---green: ; */
+}
+
+/* 
+#B3CCDF
+#90989B
+
+#E0E5E9
+*/
 .App {
   text-align: center;
 }
 body{
-  background-color: #D3B1C2 ;
+  min-height: 100vh;
+  /* background-color: #D3B1C2 ; */
+  /* background-image: url(../public/images/pexels-aleksandar-pasaric-325185.jpg); */
+  /* background-size: cover; */
+  background: linear-gradient(217deg, white, rgba(222, 236, 20, 0.267) 70.71%),
+            linear-gradient(127deg, var(--olive-green), rgba(0,255,0,0) 0.71%),
+            linear-gradient(336deg, var(--yellow-green), rgba(0,0,255,0) 70.71%);
 }
-
-.myForm{
-  margin-top: 50px !important;
-  margin: 0 auto;
-  max-width: 400px;
-  padding: 40px;
-  background-color: #130329;
-}
-.myNav{
-  background-color:   #130329   !important;
-  margin-bottom: 30px;
-}
-.bleu{
-  color: rgb(9, 0, 48) ;
-}
-.mySubmit{
-  /* margin-top: 10px; */
-  background-color: #FCA7A5 ;
-  border: none;
-  width: 200px;
-  padding: 10px;
-  color: #130329;
-  font-size: large;
-  font-weight: 700;
-  letter-spacing: 5px;
-  margin: auto;
-}
-.pageTitle{
-  text-align: center;
-  font-weight: 650;
-}
-.myPink{
-  color: #FCA7A5 !important;
-}
-/* mauve   #D3B1C2  */
-.bg{
-  background-image: url(../public/images/téléchargement\ \(1\).png) !important;
-}
+/********************************  FORMS  **************************************/
 .myLinks{
   padding-left: 0px;
   padding-top: 0px;
@@ -51,12 +41,84 @@ body{
 }
 .titleForms{
   text-align: center;
-  font-weight: 400;
-  color: #FCA7A5;
+  font-weight: 500;
+  /* color: var(--yellow-green); */
+  color: white;
 }
 .submitForm{
   margin-top: 40px;
   text-align: center;
+}
+/* .imageForm{
+
+} */
+@media screen and (max-width: 765px) {
+  .imageForm{
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+  } 
+  .myForm{
+    background-image: url(../public/images/pictures/output-onlinepngtools.png);
+    background-size: cover;
+    /* opacity: 0.5; */
+  }
+
+}
+.myBigForm{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+.myBigForm img{
+  /* max-height: 400px; */
+  /* min-width: 30px; */
+  height: 405px;
+  
+  
+}
+.myForm{
+  max-width: 450px;
+  min-width: 340px;
+  padding: 40px;
+  background-color: var(--seafoam-green);
+  /* background-image: url(../public/images/pictures/plante.jpg);
+  background-size: cover; */
+}
+.mySubmit{
+  /* margin-top: 10px; */
+
+  background-color: var(--yellow-green);
+  border: none;
+  width: 200px;
+  padding: 10px;
+  color: var(--lime-green);
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin: auto;
+  border: solid rgba(238, 130, 238, 0);
+}
+.mySubmit:hover {
+  background-color: var(--lime-green) ;
+  /* background-color: var(--green); */
+  color:var(--yellow-green);
+  color: white;
+  border: solid rgba(128, 128, 128, 0);
+  border-radius: 0rem;
+  /* background-image: url(../public/images/pictures/plante.jpg);
+  background-size: cover; */
+}
+
+/********************************  PAGES  **************************************/
+.pageTitle{
+  text-align: center;
+  font-weight: 650;
+  color: var(--seafoam-green);
+}
+/********************************  UTILES  **************************************/
+.myPink{
+  color: var(--yellow-green) !important;
 }
 .lettre-space-5{
   letter-spacing: 5px;
@@ -64,6 +126,32 @@ body{
 .lettre-space-2{
   letter-spacing: 2px;
 }
+/* mauve   #D3B1C2  */
+/********************************  NAVBAR  **************************************/
+.myNav{
+  background-color:   var(--seafoam-green)   !important;
+  margin-bottom: 30px;
+}
+.df-myNavTitles{
+  /* display: flex; */
+  /* justify-content: end; */
+  margin-right: 30px;
+  float: right ;
+}
+.myNavTitles{
+  /* color: var(--yellow-green) !important; */
+  color: white !important;
+}
+.navTitle{
+  margin-left: 30px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: white !important;
+}
+/* .bg{
+  background-image: url(../public/images/téléchargement\ \(1\).png) !important;
+} */
+/********************************  CAPTCHA  **************************************/
 .inputCaptcha{
   margin-left: 5px;
 }

@@ -19,7 +19,6 @@ function Register(props) {
         })
         .then(resp => resp.text()).then(text => {
             const json = JSON.tryParse(text);
-            document.cookie = `auth=${json.token};max-age=${60*60*24}`;
             console.log(json);
         });
     }
