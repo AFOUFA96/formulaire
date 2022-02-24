@@ -1,10 +1,11 @@
 import {Outlet} from "react-router-dom";
-import NavBar from "../components/NavBar";
+import MyNavBar from "../components/MyNavBar";
+
 function BaseScreen(props){
 
     return(
         <>
-            <NavBar />
+            <MyNavBar />
             <main className="container">
                 <Outlet />
             </main>

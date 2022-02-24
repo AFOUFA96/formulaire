@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-// import Navbar from 'react-bootstrap/Navbar';
+import { Navbar, Container, Nav, Offcanvas, NavDropdown, } from 'react-bootstrap'
 
-const Navbar = (props) => {
+function MyNavBar(props) {
+
     return (
         <>
-            <nav className="myNav navbar navbar-expand-lg navbar-light bg-light">
+            {/* <nav className="myNav navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand navTitle lettre-space-2 ">Bienvenue !</Link>
                     <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,8 +28,39 @@ const Navbar = (props) => {
                         </ul>
                     </div>
                 </div>
-            </nav>
-{/* 
+            </nav> */}
+
+            {/* <Navbar bg="light" expand={false}>
+                <Container fluid>
+                    <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                    <Navbar.Offcanvas
+                        id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel"
+                        placement="start"
+                    >
+                        <Offcanvas.Header closeButton>
+                            <Offcanvas.Title id="offcanvasNavbarLabel">Offcanvas</Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            <Nav className="justify-content-end flex-grow-1 pe-3">
+                                <Nav.Link href="#action1">Home</Nav.Link>
+                                <Nav.Link href="#action2">Link</Nav.Link>
+                                <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action5">
+                                        Something else here
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                            </Nav>
+
+                        </Offcanvas.Body>
+                    </Navbar.Offcanvas>
+                </Container>
+            </Navbar> */}
+
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -53,8 +85,8 @@ const Navbar = (props) => {
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar> */}
+            </Navbar>
         </>
-    )
+    );
 }
-export default Navbar;
+export default MyNavBar;

@@ -22,8 +22,6 @@ function Login(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
-
-
         let formData = new FormData(event.currentTarget);
         const value = JSON.stringify(Object.fromEntries(formData));
         const json = JSON.tryParse(value);
@@ -35,10 +33,16 @@ function Login(props) {
             method: "post",
             body: JSON.stringify(json)
         })
-            .then(resp => resp.text()).then(text => {
+            .then(resp => resp.text())
+            .then(text => {
                 const json = JSON.tryParse(text);
-                document.cookie = `auth=${json.token};max-age=${60 * 60 * 24}`;
-                console.log(json);
+                if(json.status){
+                    document.cookie = `auth=${json.token};max-age=${60 * 60 * 24}`;
+                    console.log(json);
+                }else{
+                    document.cookie = `auth=null;max-age=0`;
+                }
+                
             });
     }
 
