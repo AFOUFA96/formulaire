@@ -3,9 +3,7 @@ import { Extenders } from '../Extenders';
 Extenders.init();
 
 
-
 function Contact(props) {
-
     function handleSubmit(event) {
         event.preventDefault();
         let formData = new FormData(event.currentTarget);

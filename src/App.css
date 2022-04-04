@@ -58,10 +58,13 @@ body{
     width: 0px;
     visibility: hidden;
   } 
-  .myForm{
+  .loginForm{
     background-image: url(../public/images/pictures/output-onlinepngtools.png);
     background-size: cover;
-    /* opacity: 0.5; */
+  }
+  .registerForm{
+    background-image: url(../public/images/pictures/output-onlinepngtools1.png);
+    background-size: cover;
   }
 
 }
@@ -70,12 +73,11 @@ body{
   margin-top: 30px;
   justify-content: center;
 }
-.myBigForm img{
-  /* max-height: 400px; */
-  /* min-width: 30px; */
+.imageLogin{
   height: 405px;
-  
-  
+}
+.imageRegister{
+  height: 408.36px;
 }
 .myForm{
   max-width: 450px;
@@ -140,7 +142,8 @@ body{
 }
 .myNavTitles{
   /* color: var(--yellow-green) !important; */
-  color: white !important;
+  color: var(--olive-green) !important;
+  font-weight: 500;
 }
 .navTitle{
   margin-left: 30px;
