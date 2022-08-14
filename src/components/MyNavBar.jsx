@@ -8,6 +8,42 @@ function MyNavBar(props) {
 
     return (
         <>
+        <Navbar className="myNav" bg="light" expand={false}>
+                <Container fluid>
+                    <Navbar.Brand className="navTitle lettre-space-2" href="#">Bienvenue !</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="offcanvasNavbar" />
+                    <Navbar.Offcanvas
+                        id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel"
+                        placement="start"
+                    >
+                        <Offcanvas.Header closeButton>
+                            <Offcanvas.Title id="offcanvasNavbarLabel">Bienvenue {auth.email} </Offcanvas.Title>
+                        </Offcanvas.Header>
+                        <Offcanvas.Body>
+                            <Nav className="justify-content-end flex-grow-1 pe-3">
+                                <Nav.Link className="myNavTitles" href="/">Home</Nav.Link>
+                                {auth.role === 1 && <Nav.Link className="myNavTitles" href="/user">User</Nav.Link>}
+                                {auth.role === 2 && <Nav.Link className="myNavTitles" href="/admin">Admin</Nav.Link>}
+                                {auth.role > 0 && <Nav.Link className="myNavTitles" href="/account">Account</Nav.Link>}
+                                {auth.role === 0 && <Nav.Link className="myNavTitles" href="/login">login</Nav.Link>}
+                                {auth.role === 0 && <Nav.Link className="myNavTitles" href="/register">Register</Nav.Link>}
+                                {auth.role > 0 && <Nav.Link className="myNavTitles" href="/logout">logout</Nav.Link>}
+                                <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action5">
+                                        Something else here
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+                            </Nav>
+
+                        </Offcanvas.Body>
+                    </Navbar.Offcanvas>
+                </Container>
+            </Navbar>
+            
             {/* <nav className="myNav navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand navTitle lettre-space-2 ">Bienvenue !</Link>
@@ -78,41 +114,7 @@ function MyNavBar(props) {
                 </div>
             </nav> */}
 
-            <Navbar className="myNav" bg="light" expand={false}>
-                <Container fluid>
-                    <Navbar.Brand className="navTitle lettre-space-2" href="#">Bienvenue !</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="offcanvasNavbar" />
-                    <Navbar.Offcanvas
-                        id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel"
-                        placement="start"
-                    >
-                        <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel">Bienvenue !</Offcanvas.Title>
-                        </Offcanvas.Header>
-                        <Offcanvas.Body>
-                            <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Link className="myNavTitles" href="/">Home</Nav.Link>
-                                {auth.role === 1 && <Nav.Link className="myNavTitles" href="/user">User</Nav.Link>}
-                                {auth.role === 2 && <Nav.Link className="myNavTitles" href="/admin">Admin</Nav.Link>}
-                                {auth.role > 0 && <Nav.Link className="myNavTitles" href="/account">Account</Nav.Link>}
-                                {auth.role === 0 && <Nav.Link className="myNavTitles" href="/login">login</Nav.Link>}
-                                {auth.role === 0 && <Nav.Link className="myNavTitles" href="/register">Register</Nav.Link>}
-                                {auth.role > 0 && <Nav.Link className="myNavTitles" href="/logout">logout</Nav.Link>}
-                                <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action5">
-                                        Something else here
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav>
-
-                        </Offcanvas.Body>
-                    </Navbar.Offcanvas>
-                </Container>
-            </Navbar>
+            
             {/* 
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>

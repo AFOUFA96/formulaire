@@ -20,6 +20,7 @@ import LogoutPage from './pages/LogoutPage';
 function App() {
   const { auth } = useContext(AuthContext);
   console.log(auth.role);
+  console.log(auth.email);
   return (
     <>
       <Router>

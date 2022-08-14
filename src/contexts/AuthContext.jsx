@@ -4,14 +4,15 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
 
-    const [auth, setAuth] = useState({role:0});
+    const [auth, setAuth] = useState({role:0, email:""});
 
     useEffect(()=>{
-        fetch("http://localhost:5000/auth", {credentials:'include'}).then((resp) => resp.text())
+        fetch("http://localhost:5000/auth",{credentials:'include'})
+         .then((resp) => resp.text())
         .then((text) => {
             const data = JSON.tryParse(text);
             if(data.status){
-                setAuth({role:data.role});
+                setAuth({role:data.role, email:data.email});
             }
             else{
                 document.cookie = `auth=null;max-age=0`;

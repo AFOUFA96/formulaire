@@ -1,3 +1,4 @@
+ import "../components/css/card.css";
 function AccountPage(props){
 
     return(

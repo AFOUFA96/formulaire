@@ -5,7 +5,7 @@ function BaseScreen(props){
 
     return(
         <>
-            <MyNavBar />
+            <MyNavBar/>
             <main className="container">
                 <Outlet />
             </main>

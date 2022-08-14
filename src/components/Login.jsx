@@ -8,7 +8,7 @@ Extenders.init();
 
 
 function Login(props) {
-    const { setAuth } = useContext(AuthContext);
+    const { setAuth} = useContext(AuthContext);
     const navigate = useNavigate();
 
     // function doSubmit() {
@@ -40,7 +40,7 @@ function Login(props) {
                 const json = JSON.tryParse(text);
                 if (json.status) {
                     document.cookie = `auth=${json.token};max-age=${60 * 60 * 24}`;
-                    setAuth({ role: json.role });
+                    setAuth({ role: json.role , email : json.email});
                     console.log(json);
                     navigate("/account");
                 } else {
